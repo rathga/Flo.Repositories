@@ -17,12 +17,12 @@ business logic.
   own particular method to return data, ending up with lots and lots of (often similar looking) methods or returning more
   data than is required and letting the front-end sort it out
 - Where to handle validation: 
-  - only in front-end with business and repository trusting data is valid?
-  - in business layer before accessing repo?
-- How to communication validation back to the front end
-  - lots of bespoke logic and mapping?  Generic errors?
+  - Only in front-end with business and repository trusting data is valid?
+  - In business layer before accessing repo?
+- How to communicate validation results back to the front end
+  - Lots of bespoke logic and mapping?  Generic errors?
 - How to handle authorisation: 
-  - only in front-end with business and repository layers trusting that access is authorised?
+  - Only in front-end with business and repository layers trusting that access is authorised?  What if another front-end is subsequently written or somebody accesses an API directly?
 
 Flo.Repositories helps solve these by:
 
