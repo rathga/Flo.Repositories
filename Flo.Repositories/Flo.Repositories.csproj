@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>Flo.Repositories</AssemblyName>
+    <RootNamespace>Flo.Repositories</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.1</Version>
+    <Authors>Rathga</Authors>
+    <Description>Simple repository pattern with authentication and validaiton, to be used with any data source (see other packages)</Description>
+    <Copyright>Richard Davies</Copyright>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/rathga/Flo.Repositories</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
+    <PackageReference Include="Flo.Result" Version="0.1.1" />
+  </ItemGroup>
+
+</Project>
