@@ -5,6 +5,7 @@
     <Version>0.1.0</Version>
     <Authors>Richard Davies</Authors>
     <Description>MongoDB implementation of Flo.Repositories</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
