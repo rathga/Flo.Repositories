@@ -6,6 +6,7 @@
     <Authors>Richard Davies</Authors>
     <Description>MongoDB implementation of Flo.Repositories</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/rathga/Flo.Repositories</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
