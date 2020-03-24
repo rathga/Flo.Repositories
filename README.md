@@ -50,7 +50,7 @@ Create a repo by inheriting from `RepositoryBase`:
 public class PersonRepo : RepositoryBase<Person, Guid>
 {
     public PersonRepo(
-        ICrud<Person, Guid> crud, // provided by data impelmentation
+        ICrud<Person, Guid> crud, // provided by data implementation
         IValidator<Person, Guid>, 
         IAuthoriser<Person, Guid>) 
         : base(crud, validator, authoriser) { }
@@ -60,13 +60,16 @@ public class PersonRepo : RepositoryBase<Person, Guid>
 Add your data implementation, your repos and your validators to the services collection:
 
 ```csharp
+// add data source for storing your entities
 services.AddMongoDBRepo<
     Person, // your entity
     Guid,  // it's keytype
     PersonRepo, // your repository (above)
-    DataAnnotationValidator, // a basic or your bespoke validatator
-    AllowAllAuthoriser // a basic or your bespoke authoriser
-    >();
+    >(/*...mongo DB connection, database and collection details for Person...*/);
+
+// add your validator and authoriser
+services.AddScoped<IValidator<Person, Guid>, DataAnnotationValidator>() // a basic or your bespoke validatator
+        .AddScoped<IAuthoriser<Person, Guid>, AllowAllAuthoriser>(); // a basic or your bespoke authoriser
 ```
 
 And inject and use your repo:
