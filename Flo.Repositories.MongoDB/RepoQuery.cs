@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Driver.Linq;
 using MongoDB.Driver;
-using RentalFlo.Repositories;
+using Flo.Repositories;
 
-namespace RentalFlo.Repositories.MongoDB
+namespace Flo.Repositories.MongoDB
 {
-    public class RepoQuery<T> : RepoQueryBase<T, Guid> where T: Entity<Guid> 
+    public class RepoQuery<T, TKeyType> : RepoQueryBase<T, TKeyType> where T: Entity<TKeyType> 
     {
         private readonly IMongoQueryable<T> queryable;
 
@@ -33,9 +33,9 @@ namespace RentalFlo.Repositories.MongoDB
             return await queryable.ToListAsync();
         }
 
-        protected override IRepoQuery<TNext, Guid> Wrap<TNext>(IQueryable<TNext> queryable)
+        protected override IRepoQuery<TNext, TKeyType> Wrap<TNext>(IQueryable<TNext> queryable)
         {
-            return new RepoQuery<TNext>((IMongoQueryable<TNext>)queryable);
+            return new RepoQuery<TNext, TKeyType>((IMongoQueryable<TNext>)queryable);
         }
     }
 }

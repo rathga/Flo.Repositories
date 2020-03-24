@@ -2,11 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using RentalFlo.Repositories;
+using Flo.Repositories;
 
-namespace RentalFlo.Repositories.MongoDB
+namespace Flo.Repositories.MongoDB
 {
-    public class RawGet<T, TKeyType> : IRawGet<T, Guid> where T: Entity<Guid>
+    public class RawGet<T, TKeyType> : IRawGet<T, TKeyType> where T: Entity<TKeyType>
     {
         protected readonly IMongoCollection<T> collection;
 
@@ -15,9 +15,9 @@ namespace RentalFlo.Repositories.MongoDB
             this.collection = collection;
         }
 
-        public virtual IRepoQuery<T, Guid> Get()
+        public virtual IRepoQuery<T, TKeyType> Get()
         {
-            return new RepoQuery<T>(collection.AsQueryable());
+            return new RepoQuery<T, TKeyType>(collection.AsQueryable());
         }
     }
 }
