@@ -190,5 +190,15 @@ public class PersonRepo : RepositoryBase<Person, Guid>
 await repo.GetByDepartmentAsync(10).ToListAsync(); // returns NotAuthorisedException if current user does not have access to department 10, by whatever logic you implement
 ```
 
+### Samples
+
+#### GoodToDo
+
+This is a WebAPI using .NET Core 3.1 utilising Flo.Repositories and Flo.Repositories.MongoDB to create a very simple
+ToDo list application with two controllers (one for registering/logging in and one for the ToDos).
+
+A front end using VueJS is provided in a seperate project as a front end.  VueJS takes Result objects from the API for basic
+validation.
+
 ### More to come!
 

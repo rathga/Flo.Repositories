@@ -9,6 +9,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flo.Result", "Flo.Result\Fl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flo.Repositories.MongoDB", "Flo.Repositories.MongoDB\Flo.Repositories.MongoDB.csproj", "{867D8639-3240-48EF-8A6F-59A1D5F8864A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoodToDo.API", "Samples\GoodToDo\GoodToDo.API\GoodToDo.API.csproj", "{0ECC1AAF-BCC4-4FDF-BB77-E477B92C597B}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "GoodToDo.ClientApp", "Samples\GoodToDo\GoodToDo.ClientApp\GoodToDo.ClientApp.njsproj", "{FF738078-C531-4CD4-90BC-09E2B384859A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{3FA647C4-9274-438C-B971-7BF4F064BAB1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GoodToDo", "GoodToDo", "{47C59B19-FE38-4409-8826-4971A49796CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +35,22 @@ Global
 		{867D8639-3240-48EF-8A6F-59A1D5F8864A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{867D8639-3240-48EF-8A6F-59A1D5F8864A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{867D8639-3240-48EF-8A6F-59A1D5F8864A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ECC1AAF-BCC4-4FDF-BB77-E477B92C597B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ECC1AAF-BCC4-4FDF-BB77-E477B92C597B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ECC1AAF-BCC4-4FDF-BB77-E477B92C597B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ECC1AAF-BCC4-4FDF-BB77-E477B92C597B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF738078-C531-4CD4-90BC-09E2B384859A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF738078-C531-4CD4-90BC-09E2B384859A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF738078-C531-4CD4-90BC-09E2B384859A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF738078-C531-4CD4-90BC-09E2B384859A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0ECC1AAF-BCC4-4FDF-BB77-E477B92C597B} = {47C59B19-FE38-4409-8826-4971A49796CA}
+		{FF738078-C531-4CD4-90BC-09E2B384859A} = {47C59B19-FE38-4409-8826-4971A49796CA}
+		{47C59B19-FE38-4409-8826-4971A49796CA} = {3FA647C4-9274-438C-B971-7BF4F064BAB1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F087D73A-BD7C-44BC-9E6E-AD5074B96536}
